@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Video and Image Website</title>
+	<style>
+		.image-container {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.image-container img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.image-container .image-title {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 5px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			font-size: 1.2rem;
+			font-weight: bold;
+			text-align: center;
+			opacity: 0;
+			transition: opacity 0.2s ease-in-out;
+		}
+		
+		.image-container:hover .image-title {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Welcome to My Video and Image Website</h1>
+		<form>
+			<input type="text" name="search" placeholder="Search...">
+			<button type="submit">Search</button>
+			<label for="category">Category:</label>
+			<select name="category" id="category">
+				<option value="">All</option>
+				<option value="videos">Videos</option>
+				<option value="images">Images</option>
+			</select>
+		</form>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#videos">Videos</a></li>
+			<li><a href="#images">Images</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<section id="videos">
+			<h2>Videos</h2>
+			<form>
+				<input type="text" name="search" placeholder="Search...">
+				<button type="submit">Search</button>
+				<label for="category">Category:</label>
+				<select name="category" id="category">
+					<option value="">All</option>
+					<option value="funny">Funny</option>
+					<option value="music">Music</option>
+					<option value="animals">Animals</option>
+				</select>
+			</form>
+			<video controls>
+				<source src="video1.mp4" type="video/mp4">
+				<source src="video1.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+			<video controls>
+				<source src="video2.mp4" type="video/mp4">
+				<source src="video2.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video>
+		</section>
+		
+		<section id="images">
+			<h2>Images</h2>
+			<form>
+				<input type="text" name="search" placeholder="Search...">
+				<button type="submit">Search</button>
+				<label for="category">Category:</label>
+				<select name="category" id="category">
+					<option value="">All</option>
+					<option value="nature">Nature</option>
+					<option value="travel">Travel</option>
+					<option value="food">Food</option>
+				</select>
+			</form>
+			<div class="image-container">
+				<img
